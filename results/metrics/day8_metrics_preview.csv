@@ -1,0 +1,2 @@
+sct_mae_hu,sct_rmse_hu,sct_psnr,sct_ssim,raw_cbct_mae_hu,raw_cbct_rmse_hu,raw_cbct_psnr,raw_cbct_ssim,sct_mae_air_lung_hu,raw_cbct_mae_air_lung_hu,sct_mae_soft_tissue_hu,raw_cbct_mae_soft_tissue_hu,sct_mae_bone_hu,raw_cbct_mae_bone_hu,sct_mae_body_hu,raw_cbct_mae_body_hu
+132.61513,207.13933,21.974218,-0.00821208326135499,134.80681,210.96248,21.815365,0.809853723010998,217.80403,224.42207,77.67957,85.4522,237.26134,204.6464,132.61513,134.80681

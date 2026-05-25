@@ -1,0 +1,34 @@
+
+# CBCT-to-synthetic CT Generation Using 2.5D U-Net++
+
+## Project Goal
+This project develops a CBCT-to-synthetic CT pipeline for adaptive radiotherapy using SynthRAD2025 Task 2 data. The goal is to convert artifact-prone CBCT images into CT-like images with improved HU accuracy.
+
+## Final Model
+- Architecture: 2.5D U-Net++ with ResNet-34 encoder
+- Input: 7 neighboring CBCT slices
+- Output: center synthetic CT slice
+- Image size: 320 x 320
+- Loss: L1 + 0.2 SSIM + 0.05 Gradient loss
+- Training: single fold, 80 training patients, 20 validation patients
+- Epochs: 25
+- Best epoch: 12
+
+## Final Result
+The final deterministic model reduced overall MAE from raw CBCT to synthetic CT by approximately 59%.
+
+Key results:
+- Raw CBCT MAE: 216.97 HU
+- Final sCT MAE: 88.84 HU
+- Overall MAE improvement: 59.05%
+- Soft tissue MAE improvement: 71.26%
+- Masked-background SSIM: approximately 0.798
+
+## Uncertainty Analysis
+Monte Carlo dropout was implemented using 20 stochastic forward passes per slice. Random-100 validation analysis showed a weak positive error-uncertainty correlation, suggesting exploratory but not fully calibrated uncertainty estimation.
+
+## Main Limitation
+The model improved body, bone, and soft tissue regions, but low-density air/lung regions remained challenging.
+
+## Final Use
+The deterministic model is used for final sCT generation. MC dropout is reported as exploratory uncertainty analysis.
