@@ -1,0 +1,33 @@
+data:
+  root_dir: "data/Task2"
+  image_size: 320
+  min_hu: -1000
+  max_hu: 1600
+  input_slices: 7
+
+model:
+  architecture: "unetplusplus"
+  encoder: "resnet34"
+  in_channels: 7
+  out_channels: 1
+  dropout: 0.2
+
+training:
+  fold: 0
+  epochs: 25
+  batch_size: 2
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  num_workers: 0
+  max_train_patients: 80
+  max_val_patients: 20
+
+loss:
+  loss_type: "combined"
+  l1_weight: 1.0
+  ssim_weight: 0.2
+  gradient_weight: 0.05
+
+paths:
+  checkpoint_dir: "checkpoints/final_single_fold"
+  log_dir: "results/metrics"
