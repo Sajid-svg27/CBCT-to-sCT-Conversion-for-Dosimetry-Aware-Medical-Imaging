@@ -1,0 +1,13 @@
+torch
+torchvision
+numpy
+pandas
+matplotlib
+scikit-image
+scikit-learn
+SimpleITK
+nibabel
+tqdm
+PyYAML
+segmentation-models-pytorch
+opencv-python
