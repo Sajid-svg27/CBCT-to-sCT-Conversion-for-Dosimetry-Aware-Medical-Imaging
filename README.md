@@ -1,13 +1,9 @@
 
-
-````markdown
 # CBCT-to-Synthetic CT Generation for Adaptive Radiotherapy
 
 This project implements a CBCT-to-synthetic CT generation pipeline using the **SynthRAD2025 Task 2** dataset. The goal is to convert cone-beam CT images into CT-like synthetic CT images with improved HU accuracy for adaptive radiotherapy applications.
 
 The project was developed as a medical imaging / medical physics AI portfolio project, focusing on practical CBCT artifact correction, HU restoration, region-wise evaluation, and exploratory uncertainty estimation.
-
----
 
 ## Project Motivation
 
@@ -23,29 +19,21 @@ These limitations make raw CBCT less reliable for quantitative radiotherapy task
 
 Synthetic CT generation aims to learn a mapping:
 
-```text
+
 CBCT image → CT-like synthetic CT image
-````
 
 so that the output has improved anatomical and HU consistency compared with raw CBCT.
-
----
 
 ## Dataset
 
 The project uses the **SynthRAD2025 Task 2** dataset.
 
 Input:
-
-```text
 CBCT
-```
 
 Target:
-
-```text
 Planning CT
-```
+
 
 Anatomical regions:
 
